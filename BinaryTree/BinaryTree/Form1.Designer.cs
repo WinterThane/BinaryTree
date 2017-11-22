@@ -34,14 +34,16 @@
             this.menuTitlePanel = new System.Windows.Forms.Panel();
             this.treePanel = new System.Windows.Forms.Panel();
             this.menuLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.randomRootBtn = new System.Windows.Forms.Button();
-            this.fixedRootBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.minRootValuTB = new System.Windows.Forms.TextBox();
+            this.fixedRootBtn = new System.Windows.Forms.Button();
+            this.randomRootBtn = new System.Windows.Forms.Button();
             this.maxRootValueTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.addRandomValueBtn = new System.Windows.Forms.Button();
+            this.consoleTB = new System.Windows.Forms.TextBox();
             this.tableLayout.SuspendLayout();
+            this.treePanel.SuspendLayout();
             this.menuLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +102,7 @@
             this.treePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.treePanel.Controls.Add(this.consoleTB);
             this.treePanel.Location = new System.Drawing.Point(303, 53);
             this.treePanel.Name = "treePanel";
             this.treePanel.Size = new System.Drawing.Size(786, 514);
@@ -138,26 +141,6 @@
             this.menuLayoutPanel.Size = new System.Drawing.Size(294, 514);
             this.menuLayoutPanel.TabIndex = 4;
             // 
-            // randomRootBtn
-            // 
-            this.randomRootBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.randomRootBtn.Location = new System.Drawing.Point(3, 163);
-            this.randomRootBtn.Name = "randomRootBtn";
-            this.randomRootBtn.Size = new System.Drawing.Size(288, 34);
-            this.randomRootBtn.TabIndex = 0;
-            this.randomRootBtn.Text = "Create random root";
-            this.randomRootBtn.UseVisualStyleBackColor = true;
-            // 
-            // fixedRootBtn
-            // 
-            this.fixedRootBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.fixedRootBtn.Location = new System.Drawing.Point(3, 123);
-            this.fixedRootBtn.Name = "fixedRootBtn";
-            this.fixedRootBtn.Size = new System.Drawing.Size(288, 34);
-            this.fixedRootBtn.TabIndex = 1;
-            this.fixedRootBtn.Text = "Create root";
-            this.fixedRootBtn.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -177,6 +160,26 @@
             this.minRootValuTB.Name = "minRootValuTB";
             this.minRootValuTB.Size = new System.Drawing.Size(134, 23);
             this.minRootValuTB.TabIndex = 3;
+            // 
+            // fixedRootBtn
+            // 
+            this.fixedRootBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.fixedRootBtn.Location = new System.Drawing.Point(3, 123);
+            this.fixedRootBtn.Name = "fixedRootBtn";
+            this.fixedRootBtn.Size = new System.Drawing.Size(288, 34);
+            this.fixedRootBtn.TabIndex = 1;
+            this.fixedRootBtn.Text = "Create root";
+            this.fixedRootBtn.UseVisualStyleBackColor = true;
+            // 
+            // randomRootBtn
+            // 
+            this.randomRootBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.randomRootBtn.Location = new System.Drawing.Point(3, 163);
+            this.randomRootBtn.Name = "randomRootBtn";
+            this.randomRootBtn.Size = new System.Drawing.Size(288, 34);
+            this.randomRootBtn.TabIndex = 0;
+            this.randomRootBtn.Text = "Create random root";
+            this.randomRootBtn.UseVisualStyleBackColor = true;
             // 
             // maxRootValueTB
             // 
@@ -208,6 +211,16 @@
             this.addRandomValueBtn.Text = "Add random value";
             this.addRandomValueBtn.UseVisualStyleBackColor = true;
             // 
+            // consoleTB
+            // 
+            this.consoleTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.consoleTB.Location = new System.Drawing.Point(3, 367);
+            this.consoleTB.Multiline = true;
+            this.consoleTB.Name = "consoleTB";
+            this.consoleTB.Size = new System.Drawing.Size(686, 144);
+            this.consoleTB.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +232,8 @@
             this.Text = "Binary tree visualization";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayout.ResumeLayout(false);
+            this.treePanel.ResumeLayout(false);
+            this.treePanel.PerformLayout();
             this.menuLayoutPanel.ResumeLayout(false);
             this.menuLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -240,6 +255,7 @@
         private System.Windows.Forms.TextBox maxRootValueTB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button addRandomValueBtn;
+        private System.Windows.Forms.TextBox consoleTB;
     }
 }
 

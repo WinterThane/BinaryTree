@@ -15,8 +15,8 @@ namespace BinaryTree
             titlePanel.Paint += TitlePanel;
             menuTitlePanel.Paint += MenuTitlePanel;
             treePanel.Paint += TreePanel;
-            tableLayout.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-            menuLayoutPanel.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            //tableLayout.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            //menuLayoutPanel.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
         }
 
         private void TreePanel(object sender, PaintEventArgs e)
