@@ -17,7 +17,7 @@
 
             if(LeftNode == null && RightNode == null)
             {
-                nodeString += " (leafe) ";
+                nodeString += " (leaf) ";
             }
 
             if(LeftNode != null)

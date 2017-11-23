@@ -47,5 +47,27 @@ namespace BinaryTree
         {
             Application.Exit();
         }
+
+        private void randomTreeBtn_Click(object sender, EventArgs e)
+        {
+            Tree<int> tree = new Tree<int>();
+
+            Random rand = new Random(DateTime.Now.Millisecond);
+            string order = "";
+
+            for (int i = 0; i < 5; i++)
+            {
+                int randInt = rand.Next(1, 500);
+                tree.Insert(randInt);
+                order += randInt + " ";
+            }
+
+            consoleTB.Text += "Root: " + tree.Root.Element + Environment.NewLine;
+            consoleTB.Text += "Min element: " + tree.FindMin() + Environment.NewLine;
+            consoleTB.Text += "Max element: " + tree.FindMax() + Environment.NewLine;
+            consoleTB.Text += "Tree: " + tree;
+
+            //string consoleText = consoleTB.Text;
+        }
     }
 }

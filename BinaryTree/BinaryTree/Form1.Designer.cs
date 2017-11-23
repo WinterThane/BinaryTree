@@ -33,6 +33,7 @@
             this.titlePanel = new System.Windows.Forms.Panel();
             this.menuTitlePanel = new System.Windows.Forms.Panel();
             this.treePanel = new System.Windows.Forms.Panel();
+            this.consoleTB = new System.Windows.Forms.TextBox();
             this.menuLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.minRootValuTB = new System.Windows.Forms.TextBox();
@@ -41,7 +42,7 @@
             this.maxRootValueTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.addRandomValueBtn = new System.Windows.Forms.Button();
-            this.consoleTB = new System.Windows.Forms.TextBox();
+            this.randomTreeBtn = new System.Windows.Forms.Button();
             this.tableLayout.SuspendLayout();
             this.treePanel.SuspendLayout();
             this.menuLayoutPanel.SuspendLayout();
@@ -108,6 +109,16 @@
             this.treePanel.Size = new System.Drawing.Size(786, 514);
             this.treePanel.TabIndex = 3;
             // 
+            // consoleTB
+            // 
+            this.consoleTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.consoleTB.Location = new System.Drawing.Point(3, 367);
+            this.consoleTB.Multiline = true;
+            this.consoleTB.Name = "consoleTB";
+            this.consoleTB.Size = new System.Drawing.Size(686, 144);
+            this.consoleTB.TabIndex = 0;
+            // 
             // menuLayoutPanel
             // 
             this.menuLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -122,6 +133,7 @@
             this.menuLayoutPanel.Controls.Add(this.maxRootValueTB, 0, 3);
             this.menuLayoutPanel.Controls.Add(this.label2, 0, 2);
             this.menuLayoutPanel.Controls.Add(this.addRandomValueBtn, 0, 8);
+            this.menuLayoutPanel.Controls.Add(this.randomTreeBtn, 0, 11);
             this.menuLayoutPanel.Location = new System.Drawing.Point(3, 53);
             this.menuLayoutPanel.Name = "menuLayoutPanel";
             this.menuLayoutPanel.RowCount = 13;
@@ -211,15 +223,16 @@
             this.addRandomValueBtn.Text = "Add random value";
             this.addRandomValueBtn.UseVisualStyleBackColor = true;
             // 
-            // consoleTB
+            // randomTreeBtn
             // 
-            this.consoleTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.consoleTB.Location = new System.Drawing.Point(3, 367);
-            this.consoleTB.Multiline = true;
-            this.consoleTB.Name = "consoleTB";
-            this.consoleTB.Size = new System.Drawing.Size(686, 144);
-            this.consoleTB.TabIndex = 0;
+            this.randomTreeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.randomTreeBtn.Location = new System.Drawing.Point(3, 403);
+            this.randomTreeBtn.Name = "randomTreeBtn";
+            this.randomTreeBtn.Size = new System.Drawing.Size(288, 34);
+            this.randomTreeBtn.TabIndex = 7;
+            this.randomTreeBtn.Text = "Create random tree";
+            this.randomTreeBtn.UseVisualStyleBackColor = true;
+            this.randomTreeBtn.Click += new System.EventHandler(this.randomTreeBtn_Click);
             // 
             // Form1
             // 
@@ -256,6 +269,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button addRandomValueBtn;
         private System.Windows.Forms.TextBox consoleTB;
+        private System.Windows.Forms.Button randomTreeBtn;
     }
 }
 

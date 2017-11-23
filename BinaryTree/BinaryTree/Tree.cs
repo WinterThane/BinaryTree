@@ -44,7 +44,7 @@ namespace BinaryTree
         private T ElementAt(Node<T> t)
         {
             return t == null ? default(T) : t.Element;
-        }      
+        }
 
         protected Node<T> Insert(T x, Node<T> t)
         {
@@ -54,11 +54,11 @@ namespace BinaryTree
             }
             else if ((x as IComparable).CompareTo(t.Element) < 0)
             {
-                t = t.LeftNode;
+                t.LeftNode = Insert(x, t.LeftNode);
             }
             else if ((x as IComparable).CompareTo(t.Element) > 0)
             {
-                t = t.RightNode;
+                t.RightNode = Insert(x, t.RightNode);
             }
             else
             {
@@ -70,9 +70,9 @@ namespace BinaryTree
 
         private Node<T> Find(T x, Node<T> t)
         {
-            while(t != null)
+            while (t != null)
             {
-                if((x as IComparable).CompareTo(t.Element) < 0)
+                if ((x as IComparable).CompareTo(t.Element) < 0)
                 {
                     t = t.LeftNode;
                 }
@@ -100,28 +100,28 @@ namespace BinaryTree
             }
 
             return t;
-        } 
+        }
 
         private Node<T> FindMax(Node<T> t)
         {
-            if(t != null)
+            if (t != null)
             {
-                while(t.RightNode != null)
+                while (t.RightNode != null)
                 {
                     t = t.RightNode;
                 }
             }
 
             return t;
-        }   
+        }
 
         private Node<T> RemoveMin(Node<T> t)
         {
-            if(t == null)
+            if (t == null)
             {
                 throw new Exception("Number not found.");
             }
-            else if(t.LeftNode != null)
+            else if (t.LeftNode != null)
             {
                 t.LeftNode = RemoveMin(t.LeftNode);
                 return t;
@@ -130,15 +130,15 @@ namespace BinaryTree
             {
                 return t.RightNode;
             }
-        }     
+        }
 
         protected Node<T> Remove(T x, Node<T> t)
         {
-            if(t == null)
+            if (t == null)
             {
                 throw new Exception("Number not found.");
             }
-            else if((x as IComparable).CompareTo(t.Element) < 0)
+            else if ((x as IComparable).CompareTo(t.Element) < 0)
             {
                 t.LeftNode = Remove(x, t.LeftNode);
             }
@@ -146,7 +146,7 @@ namespace BinaryTree
             {
                 t.RightNode = Remove(x, t.RightNode);
             }
-            else if(t.LeftNode != null && t.RightNode != null)
+            else if (t.LeftNode != null && t.RightNode != null)
             {
                 t.Element = FindMin(t.RightNode).Element;
                 t.RightNode = RemoveMin(t.RightNode);
